@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Vanilla JS + Tailwind</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="styles.css" />
+
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     primary: "#1e40af",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+
+   <body class="min-h-screen">
+      <nav class="w-[1000px] flex justify-between mx-auto py-4">
+         <img src="./assets/image/Logo.svg" />
+
+         <ul class="flex items-center gap-x-[43px] font-[300]">
+            <li>
+               <a href="#home">Home</a>
+            </li>
+            <li>
+               <a href="#how-it-works">How it works</a>
+            </li>
+            <li>
+               <a href="#faq">FAQ</a>
+            </li>
+         </ul>
+
+         <details class="relative">
+            <summary class="list-none cursor-pointer flex items-center gap-2">
+               <img src="./assets/image/menu.svg" alt="Menu" class="w-6 h-6" />
+            </summary>
+
+            <div
+               class="absolute left-0 mt-2 bg-white shadow-md rounded-md py-3 px-4 w-[180px] z-10"
+            >
+               <ul class="flex flex-col gap-y-3 text-sm text-[#333] font-[300]">
+                  <li>
+                     <a href="#home" class="hover:text-black transition-colors"
+                        >Home</a
+                     >
+                  </li>
+                  <li>
+                     <a
+                        href="#how-it-works"
+                        class="hover:text-black transition-colors"
+                        >How it works</a
+                     >
+                  </li>
+                  <li>
+                     <a href="#faq" class="hover:text-black transition-colors"
+                        >FAQ</a
+                     >
+                  </li>
+               </ul>
+            </div>
+         </details>
+      </nav>
+
+      <main class="">
+         <section id="home" class="flex mx-auto">
+            <div class="ml-auto w-[511px] py-[96px]">
+               <div class="lalezar-regular text-[50px]">
+                  <p class="text-[#23B2DA]">The Fastest Way To Sell</p>
+                  <p class="text-[#3C2F29]">Across Marketplaces.</p>
+                  <p class="text-[#3C2F29]">Powered by AI.</p>
+               </div>
+               <p class="text-[24px] text-[#554E4A] massilia-light">
+                  KOKONUT lists your item across top marketplaces for the best
+                  deal.
+               </p>
+               <p class="text-[30px] text-[#554E4A] massilia font-bold">
+                  Reach more buyers, sell for more.
+               </p>
+               <button
+                  class="w-[240px] h-[48px] text-center bg-[#A47B65] text-white font-bold rounded-[10px] mt-10"
+               >
+                  Try It Now
+               </button>
+            </div>
+            <div class="flex items-center justify-center w-1/2">
+               <img
+                  class="my-auto mb-[-35px]"
+                  src="./assets/image/video_placeholder.svg"
+               />
+            </div>
+         </section>
+
+         <section class="py-[100px] w-[1000px] mx-auto overflow-hidden">
+            <div class="text-center text-[40px]">
+               <p class="lalezar-regular text-[#3C2F29]">
+                  AI-Optimized Listings Across Every Marketplace. 
+               </p>
+               <p class="lalezar-regular text-[#23B2DA]">
+                  More Buyers = Faster Sales
+               </p>
+            </div>
+
+            <div class="flex gap-x-[20px]">
+               <div
+                  class="w-[320px] h-[230px] flex flex-col justify-center bg-[#F3FAFC] rounded-[10px] px-[20px] text-[#554E4A]"
+               >
+                  <img
+                     class="mb-4 w-[78px] mx-auto"
+                     loading="lazy"
+                     src="assets/image/quote.svg"
+                  />
+                  <p>
+                     “Instead of listing on five different apps, I just click
+                     once—done!”
+                  </p>
+                  <p class="mt-4">— <b class="massilia">Alex</b>, Reseller</p>
+               </div>
+
+               <div
+                  class="w-[320px] h-[230px] flex flex-col justify-center bg-[#F3FAFC] rounded-[10px] px-[20px] text-[#554E4A]"
+               >
+                  <img
+                     class="mb-4 w-[78px] mx-auto"
+                     loading="lazy"
+                     src="assets/image/quote.svg"
+                  />
+                  <p>
+                     “KOKONUT gets my items in front of more buyers, so they
+                     sell faster.”
+                  </p>
+                  <p class="mt-4">
+                     — <b class="massilia">Jess</b>, Side Hustler
+                  </p>
+               </div>
+
+               <div
+                  class="w-[320px] h-[230px] flex flex-col justify-center bg-[#F3FAFC] rounded-[10px] px-[20px] text-[#554E4A]"
+               >
+                  <img
+                     class="mb-4 w-[78px] mx-auto"
+                     loading="lazy"
+                     src="assets/image/quote.svg"
+                  />
+                  <p>
+                     “No more jumping between platforms. One upload,
+                     everywhere.”
+                  </p>
+                  <p class="mt-4">— <b class="massilia">Chris</b></p>
+               </div>
+            </div>
+
+            <div class="w-full flex gap-x-10 mt-[60px] slide">
+               <img
+                  class="h-[35px] w-auto"
+                  loading="lazy"
+                  src="assets/image/ebay.svg"
+               />
+               <img
+                  class="h-[35px] w-auto"
+                  loading="lazy"
+                  src="assets/image/facebook.svg"
+               />
+               <img
+                  class="h-[35px] w-auto"
+                  loading="lazy"
+                  src="assets/image/mercari.svg"
+               />
+               <img
+                  class="h-[35px] w-auto"
+                  loading="lazy"
+                  src="assets/image/offerup.svg"
+               />
+               <img
+                  class="h-[35px] w-auto"
+                  loading="lazy"
+                  src="assets/image/poshmark.svg"
+               />
+               <img
+                  class="h-[35px] w-auto"
+                  loading="lazy"
+                  src="assets/image/thredup.svg"
+               />
+            </div>
+         </section>
+
+         <section id="how-it-works" class="bg-[#F5FDFF] pt-[94px] pb-[578px]">
+            <h3 class="text-[#23B2DA] text-center text-[40px] lalezar-regular">
+               How <b class="text-[#3C2F29]">KOKONUT</b> Works
+            </h3>
+
+            <div class="flex mt-10 mx-auto w-fit">
+               <div class="flex flex-col items-end gap-y-[26px]">
+                  <div
+                     class="flex items-center justify-end w-[450px] h-[150px]"
+                  >
+                     <p
+                        class="text-[38px] font-bold text-white massilia bg-[#3C2F29] rounded-[10px] w-[74px] h-[68px] text-center leading-normal"
+                     >
+                        01
+                     </p>
+                  </div>
+
+                  <div
+                     class="w-[450px] h-[150px] bg-white p-[30px] rounded-[10px] shadow-sm"
+                  >
+                     <p class="lalezar-regular text-[22px]">Set Your Price</p>
+                     <p class="massilia-light">
+                        Choose the best price for your item. Go with AI smart
+                        recommendations or set your own.
+                     </p>
+                  </div>
+
+                  <div
+                     class="flex items-center justify-end w-[450px] h-[150px]"
+                  >
+                     <p
+                        class="text-[38px] font-bold text-white massilia bg-[#3C2F29] rounded-[10px] w-[74px] h-[68px] text-center leading-normal"
+                     >
+                        03
+                     </p>
+                  </div>
+
+                  <div
+                     class="w-[450px] h-[150px] bg-white p-[30px] rounded-[10px] shadow-sm"
+                  >
+                     <p class="lalezar-regular text-[22px]">Get Paid!</p>
+                     <p class="massilia-light">
+                        Your item is now live on multiple marketplaces… get
+                        ready to cash in!
+                     </p>
+                  </div>
+               </div>
+
+               <div class="relative flex justify-center mx-[35px]">
+                  <div class="absolute w-[30px] h-full flex justify-center">
+                     <div class="bg-[#AEB1D0] w-[1px] h-full"></div>
+                  </div>
+                  <div
+                     class="absolute w-[30px] h-full flex flex-col gap-y-[146px] pt-[58px]"
+                  >
+                     <img
+                        class="w-[30px] h-[30px]"
+                        src="./assets/image/dot.svg"
+                     />
+                     <img
+                        class="w-[30px] h-[30px]"
+                        src="./assets/image/dot.svg"
+                     />
+                     <img
+                        class="w-[30px] h-[30px]"
+                        src="./assets/image/dot.svg"
+                     />
+                     <img
+                        class="w-[30px] h-[30px]"
+                        src="./assets/image/dot.svg"
+                     />
+                  </div>
+               </div>
+
+               <div class="flex flex-col gap-y-[26px]">
+                  <div
+                     class="w-[450px] h-[150px] bg-white p-[30px] rounded-[10px] shadow-sm"
+                  >
+                     <p class="lalezar-regular text-[22px]">Snap a Photo</p>
+                     <p class="massilia-light">
+                        KOKONUT AI scans your item and suggests the best price
+                        based on thousands of listings.
+                     </p>
+                  </div>
+
+                  <div class="flex items-center w-[450px] h-[150px]">
+                     <p
+                        class="text-[38px] font-bold text-white massilia bg-[#3C2F29] rounded-[10px] w-[74px] h-[68px] text-center leading-normal"
+                     >
+                        02
+                     </p>
+                  </div>
+
+                  <div
+                     class="w-[450px] h-[150px] bg-white p-[30px] rounded-[10px] shadow-sm"
+                  >
+                     <p class="lalezar-regular text-[22px]">
+                        List Across Marketplaces
+                     </p>
+                     <p class="massilia-light">
+                        No need to research keywords or write tedious
+                        descriptions. KOKONUT automatically fills in your item
+                        details with optimized hashtags for wider reach.
+                     </p>
+                  </div>
+
+                  <div class="flex items-center w-[450px] h-[150px]">
+                     <p
+                        class="text-[38px] font-bold text-white massilia bg-[#3C2F29] rounded-[10px] w-[74px] h-[68px] text-center leading-normal"
+                     >
+                        04
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="flex w-full mt-[72px]">
+               <button
+                  class="w-[240px] h-[48px] bg-[#A47B65] text-white rounded-[10px] massilia font-bold text-[20px] mx-auto"
+               >
+                  Sell Now
+               </button>
+            </div>
+         </section>
+
+         <section class="w-[1000px] mx-auto mb-[100px]">
+            <div class="mt-[-578px]">
+               <div class="flex flex-col items-center mt-[100px] mb-10">
+                  <span
+                     class="font-bold lalezar-regular text-[40px] text-[#3C2F29] mb-4"
+                     >List Once. <span class="text-[#23B2DA]"
+                        >Sell Everywhere.</span
+                     ></span
+                  >
+
+                  <p
+                     class="massilia-light text-[20px] text-center mb-10 px-[132px]"
+                  >
+                     Wasting time on manually listing your items on multiple
+                     apps, rewriting descriptions and constantly adjusting
+                     prices? That’s nuts! 
+                  </p>
+                  <p class="massilia-light text-[20px] text-center px-[132px]">
+                     With KOKONUT one click is all it takes to list across
+                     marketplaces and get in front of customers with
+                     AI-optimized pricing.
+                  </p>
+               </div>
+
+               <div class="flex flex-col gap-[1px] w-full bg-[#F4EBE7]">
+                  <div class="flex w-full gap-x-[1px]">
+                     <div
+                        class="rounded-tl-[20px] px-[30px] py-[18px] bg-[#3C2F29] lalezar-regular text-[22px] text-white w-full"
+                     >
+                        Feature
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] bg-[#3C2F29] lalezar-regular text-[22px] text-white w-full"
+                     >
+                        KOKONUT
+                     </div>
+                     <div
+                        class="rounded-tr-[20px] px-[30px] py-[18px] bg-[#3C2F29] lalezar-regular text-[22px] text-white w-full"
+                     >
+                        MANUAL LISTING
+                     </div>
+                  </div>
+
+                  <!-- Row: Multi-Marketplace Selling -->
+                  <div class="flex w-full gap-x-[1px] h-[70px]">
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full bg-white"
+                     >
+                        Multi-Marketplace Selling
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_check.svg"
+                        />
+                        Instantly lists on multiple platforms at once
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_x.svg"
+                        />
+                        Manually post on each marketplace
+                     </div>
+                  </div>
+
+                  <!-- Row: Time Required -->
+                  <div class="flex w-full gap-x-[1px] h-[70px]">
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full bg-white"
+                     >
+                        Time Required
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_check.svg"
+                        />
+                        Seconds
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_x.svg"
+                        />
+                        Hours
+                     </div>
+                  </div>
+
+                  <!-- Row: Pricing Suggestions -->
+                  <div class="flex w-full gap-x-[1px] h-[70px]">
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full bg-white"
+                     >
+                        Pricing Suggestions
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_check.svg"
+                        />
+                        Auto-generates the best price based on market trends
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_x.svg"
+                        />
+                        Requires researching prices manually
+                     </div>
+                  </div>
+
+                  <!-- Row: Smart Hashtags -->
+                  <div class="flex w-full gap-x-[1px] h-[70px]">
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full bg-white"
+                     >
+                        Smart Hashtags
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_check.svg"
+                        />
+                        AI-optimized for search visibility
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_x.svg"
+                        />
+                        You must write your own descriptions
+                     </div>
+                  </div>
+
+                  <!-- Row: Auto-Filled Product Details -->
+                  <div class="flex w-full gap-x-[1px] h-[70px]">
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full bg-white"
+                     >
+                        Auto-Filled Product Details
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_check.svg"
+                        />
+                        AI detects & fills in item details
+                     </div>
+                     <div
+                        class="px-[30px] py-[18px] massilia-light text-[#554E4A] w-full flex items-center bg-white"
+                     >
+                        <img
+                           class="w-[20px] h-[20px] mr-[10px]"
+                           src="assets/image/circ_x.svg"
+                        />
+                        Must manually enter brand, size, category
+                     </div>
+                  </div>
+               </div>
+
+               <div class="flex">
+                  <button
+                     class="mx-auto mt-[62px] w-[486px] h-[48px] bg-[#A47B65] text-white rounded-[10px] massilia font-bold text-[20px] mx-auto"
+                  >
+                     Sign up for early access & be the first to try it!
+                  </button>
+               </div>
+            </div>
+         </section>
+
+         <section id="faq" class="w-[842px] mx-auto mb-[100px]">
+            <p
+               class="lalezar-regular text-[40px] font-bold mb-[30px] text-center"
+            >
+               Frequently Asked Questions
+            </p>
+
+            <div>
+               <details class="border-b border-gray-300 py-4 group">
+                  <summary
+                     class="flex justify-between items-center cursor-pointer list-none"
+                  >
+                     <span class="text-[22px] lalezar-regular">
+                        Is KOKONUT really free? 👀
+                     </span>
+                     <img
+                        src="assets/image/chevdown.svg"
+                        alt="toggle"
+                        class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180"
+                     />
+                  </summary>
+                  <div class="mt-2 massilia-light text-[#554E4A]">
+                     Yup! We put 100% of the profits back in your pocket. No
+                     hidden fees, no surprises. Try it now for free.
+                  </div>
+               </details>
+
+               <details class="border-b border-gray-300 py-4 group">
+                  <summary
+                     class="flex justify-between items-center cursor-pointer list-none"
+                  >
+                     <span class="text-[22px] lalezar-regular">
+                        Which platforms can I sell on with KOKONUT? 📌
+                     </span>
+                     <img
+                        src="assets/image/chevdown.svg"
+                        alt="toggle"
+                        class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180"
+                     />
+                  </summary>
+                  <div class="mt-2 massilia-light text-[#554E4A]">
+                     All the big ones and more! eBay, Facebook Marketplace,
+                     OfferUp, Mercari, Poshmark, and more.
+                     <br />
+                     <br />
+                     Got a favorite marketplace we don’t support yet? Let us
+                     know! We’re always adding new platforms, and your
+                     suggestions help us grow.
+                  </div>
+               </details>
+
+               <details class="border-b border-gray-300 py-4 group">
+                  <summary
+                     class="flex justify-between items-center cursor-pointer list-none"
+                  >
+                     <span class="text-[22px] lalezar-regular">
+                        What if I don’t like the KOKONUT AI’s price suggestion?
+                     </span>
+                     <img
+                        src="assets/image/chevdown.svg"
+                        alt="toggle"
+                        class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180"
+                     />
+                  </summary>
+                  <div class="mt-2 massilia-light text-[#554E4A]">
+                     No problem! AI suggests a price based on real-time market
+                     data, but you’re always in control. Adjust it however you
+                     like.
+                  </div>
+               </details>
+
+               <details class="border-b border-gray-300 py-4 group">
+                  <summary
+                     class="flex justify-between items-center cursor-pointer list-none"
+                  >
+                     <span class="text-[22px] lalezar-regular">
+                        Can I choose where my item gets listed? 🔍
+                     </span>
+                     <img
+                        src="assets/image/chevdown.svg"
+                        alt="toggle"
+                        class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180"
+                     />
+                  </summary>
+                  <div class="mt-2 massilia-light text-[#554E4A]">
+                     Absolutely! You pick the marketplaces you want to sell on
+                     with just one tap.
+                  </div>
+               </details>
+
+               <details class="border-b border-gray-300 py-4 group">
+                  <summary
+                     class="flex justify-between items-center cursor-pointer list-none"
+                  >
+                     <span class="text-[22px] lalezar-regular">
+                        What if I need help? 🥥
+                     </span>
+                     <img
+                        src="assets/image/chevdown.svg"
+                        alt="toggle"
+                        class="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180"
+                     />
+                  </summary>
+                  <div class="mt-2 massilia-light text-[#554E4A]">
+                     We’ve got you! Reach out anytime at [email address] and our
+                     team will be happy to assist.
+                  </div>
+               </details>
+            </div>
+         </section>
+
+         <footer class="h-[70px] bg-[#3C2F29] flex items-center justify-center">
+            <p class="massilia-light text-[18px] text-white">
+               Copyright © 2025 | All rights are reserved by KOKONUT.
+            </p>
+         </footer>
+      </main>
+   </body>
+</html>
