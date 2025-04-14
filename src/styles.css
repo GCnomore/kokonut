@@ -1,3 +1,10 @@
+@import "tailwindcss";
+@theme {
+  --breakpoint-xs: 480px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+}
+
 @font-face {
    font-family: "Massilia";
    src: url("./assets/font/fonnts.com-Massilia_Regular.otf") format("opentype");
@@ -31,10 +38,12 @@ body {
    font-style: normal;
 }
 
-main {
+#home {
    background-image: url("./assets/image/background.svg");
    background-repeat: no-repeat;
-   background-size: 100%;
+   background-size: cover;
+   /* max-height: 620px; */
+   min-height: 620px;
 }
 
 @keyframes slideleft {
@@ -43,7 +52,7 @@ main {
    }
 
    100% {
-      transform: translateX(-1100px);
+      transform: translateX(-1050px);
    }
 }
 
