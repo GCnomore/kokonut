@@ -24,6 +24,10 @@ body {
    font-family: "MassiliaLight";
 }
 
+button {
+   cursor: pointer;
+}
+
 .massilia {
    font-family: "Massilia";
 }
